@@ -1,0 +1,82 @@
+:root {
+    --textcol: #d0d0d0ff
+}
+
+.top-space {
+    height: 50vh;
+}
+
+.page-content {
+    margin-left: 2vw;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.landing-buttons {
+    margin-left: 2vw;
+    margin-top: 3vh;
+}
+
+.landing-button {
+    margin-top: 1vh;
+}
+
+.lb {
+    margin: 0;
+    height: 1.5em;
+    width: 30vw;
+    min-width: 9em;
+    border: 1px solid #d0d0d0;
+    border-radius: 0;
+    outline: none !important;
+    background: linear-gradient(to right, #d0d0d0dd 0%, #d0d0d0dd 2.5ch, #101020 2.5ch, #101020 100%);
+    text-align: left;
+    text-decoration: none;
+    align-items: start;
+    font-family:"Courier New", monospace;
+    user-select: none;
+}
+
+.lb:hover {
+    animation:button-shift forwards;
+}
+
+.disabled {
+    cursor: default;
+    opacity: 0.6;
+    animation: none !important;
+}
+
+.button-num {
+    margin: 0;
+    height: 100%;
+    width: 2.5ch;
+    float: left;
+    font-weight: bold;
+    color: inherit;
+}
+
+.button-text {
+    color: var(--textcol);
+}
+
+.button-arrow {
+    color: var(--textcol);
+    float: right;
+}
+
+@keyframes button-shift {
+    0% {
+        --textcol: #d0d0d0ff;
+        color: black;
+        background: linear-gradient(to right, #d0d0d0dd 0%, #d0d0d0dd 2.5ch, #101020 2.5ch, #101020 100%);
+    }
+    100% {
+        --textcol: black;
+        color: #d0d0d0ff;
+        background: linear-gradient(to right, #101020 0%, #101020 2.5ch, #d0d0d0dd 2.5ch, #d0d0d0dd 100%);
+    }
+}

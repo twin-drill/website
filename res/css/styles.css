@@ -1,0 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101020;
+    color: #d0d0d0;
+    font-family: "Courier New", monospace;
+}
