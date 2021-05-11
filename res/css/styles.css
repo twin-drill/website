@@ -7,3 +7,16 @@ body {
     color: #d0d0d0;
     font-family: "Courier New", monospace;
 }
+
+@keyframes button-shift {
+    0% {
+        --textcol: #d0d0d0ff;
+        color: black;
+        background: linear-gradient(to right, #d0d0d0dd 0%, #d0d0d0dd 2.5ch, #101020 2.5ch, #101020 100%);
+    }
+    100% {
+        --textcol: black;
+        color: #d0d0d0ff;
+        background: linear-gradient(to right, #101020 0%, #101020 2.5ch, #d0d0d0dd 2.5ch, #d0d0d0dd 100%);
+    }
+}
