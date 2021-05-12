@@ -1,0 +1,51 @@
+:root {
+    --textcol: #d0d0d0ff
+}
+
+.content {
+    margin-top: 10vh;
+    user-select: none;
+}
+
+.floater {
+    display: block;
+    width: 90%;
+    align-self: center;
+}
+
+.floater-item {
+    border: 1px #d0d0d0 solid;
+    border-radius: 0;
+    width: 47%;
+    height: 100%;
+    margin: 1%;
+    background: linear-gradient(to bottom, #d0d0d0dd 0%, #d0d0d0dd 1.2em, #101020 1.2em, #101020 100%);
+}
+
+.floater-item:hover {
+    cursor: default;
+}
+
+.floater-item a:hover,
+.floater-item a:active,
+.floater-item a:visited,
+.floater-item a:link,
+.floater-item a {
+    text-decoration: none;
+    cursor: default;
+}
+
+.floater-item-header {
+    color: black;
+    font-weight: bold;
+    margin-left: 0.3ch;
+}
+
+.floater-item-text {
+    color: #d0d0d0;
+    font-size: 15px;
+    display: block;
+    margin-top: 0.1ch;
+    margin-left: 0.3ch;
+    margin-right: 0.3ch;
+}

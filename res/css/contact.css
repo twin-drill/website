@@ -1,0 +1,16 @@
+:root {
+    --textcol: #d0d0d0ff
+}
+
+.content {
+    margin-left: 2vw;
+    margin-top: 3vh;
+}
+
+.contact-button-container {
+    margin-top: 1vh;
+}
+
+.bottom {
+    font-size: 15px;
+}

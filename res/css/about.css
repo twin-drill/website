@@ -2,54 +2,6 @@
     --textcol: #d0d0d0ff
 }
 
-.page-content {
-    margin-left: 2vw;
-    margin-top: 2vh;
-    margin-right: 2vh;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-    display: inline;
-    outline: none !important;
-}
-
-.button {
-    margin: 0;
-    height: 1.5em;
-    width: 5vw;
-    min-width: 8.5ch;
-    border: 1px solid #d0d0d0;
-    border-radius: 0;
-    outline: none !important;
-    background: linear-gradient(to right, #d0d0d0dd 0%, #d0d0d0dd 2.5ch, #101020 2.5ch, #101020 100%);
-    text-align: left;
-    text-decoration: none;
-    align-items: start;
-    font-family:"Courier New", monospace;
-    user-select: none;
-}
-
-.button:hover {
-    animation:button-shift forwards;
-}
-
-.i-char {
-    margin: 0;
-    height: 100%;
-    width: 2.5ch;
-    float: left;
-    font-weight: bold;
-    color: inherit;
-}
-
-.b-text {
-    color: var(--textcol);
-    margin: 0;
-}
-
 .cnt {
     height: 30vh;
     display: block;
