@@ -1,0 +1,18 @@
+html {
+
+}
+
+body {
+
+}
+
+
+.terminal {
+    height: available;
+    width: 100%;
+}
+
+.hist {
+    height: fit-content;
+    white-space: pre;
+}
