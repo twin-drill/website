@@ -1,18 +1,27 @@
-html {
-
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #202428;
 }
 
 body {
-
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    color: #c6c6c6;
+    font-family: Hack, monospace;
 }
 
 
 .terminal {
-    height: available;
-    width: 100%;
+    overflow-y: scroll;
 }
 
 .hist {
-    height: fit-content;
-    white-space: pre;
+    display: block;
+    overflow: auto;
+}
+
+.cmd {
+    display:block;
 }

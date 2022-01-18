@@ -21,21 +21,43 @@ window.onload = function() {
 }
 
 function updateHistory() {
-    // TODO figure out how to actually get newlines to work
-    document.getElementById("history").textContent += "\r\nSession terminated.\r\n" + LINE;
+    // TODO make cookie storage framework
+    // TODO figure out what I want with scrolling
+    updateText("Session terminated.");
+    // updateText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+}
+
+function updateText(text) {
+    let textLines = text.split(/\r?\n/);
+    console.log(textLines);
+    let elem = document.createElement("cmd");
+    let hist = document.getElementById("history");
+    let em;
+    hist.appendChild(elem);
+
+    textLines.forEach(function(line) {
+        em = document.createElement("cmd.line");
+        elem.appendChild(em);
+        em.textContent += line;
+        elem.appendChild(document.createElement("br"));
+
+    });
 }
 
 function readInput() {
-    let command = document.getElementById("command").value;
+    let cmdElem = document.getElementById("command");
+    let command = cmdElem.value;
+
+    cmdElem.disabled = true;
 
     // args[0] is command; args[1:] are parameters
     let args = command.split(" ");
 
     // for now
-    console.log("parsed");
-    console.log(command);
-    document.getElementById("command").disabled = false;
-    document.getElementById("command").focus();
+    updateText("parsed: " + command);
+    cmdElem.value = ""; //is there a better way idk
+    cmdElem.disabled = false;
+    cmdElem.focus();
 }
 
 
@@ -48,19 +70,18 @@ function argparse(args) {
     for (let i = 0; i < args.length; ++i) {
         if (args[i].startsWith("--")) {
             switch (args[i]) {
-                case "option1" : option1 = true; break;
+                case "--option1" : option1 = true; break;
             }
         }
         if (args[i].startsWith("-")) {
             // setCommand
+            ++i;
             let newargs = [];
             while (!args[i].startsWith("-")) {
                 // newargs append arg
             }
+            //call function with newargs
         }
     }
 }
 
-// regex split of a multiline string
-// var result = Regex.Split(text, "\r\n|\r|\n");
-// to be used in update() for refreshing text displayed in window (limit to n lines at a time)

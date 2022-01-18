@@ -2,7 +2,9 @@
 <html lang="en">
 
 <script src="js/terminal.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +14,32 @@
 </head>
 
 
-<body>
+<body id="bg">
 <!-- TODO add margin or other spacing -->
     <terminal>
         <hist id="history">
-
         </hist>
+        o2i6@localhost:~$
         <input type="text" id="command">
     </terminal>
 </body>
+
+<script src="js/three.min.js"></script>
+<script src="js/vanta.rings.min.js"></script>
+<script>
+    VANTA.RINGS({
+        el: "#bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x88ff00,
+        backgroundColor: 0x202428,
+        backgroundAlpha: 1
+    })
+</script>
+
 </html>
