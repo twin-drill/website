@@ -47,7 +47,9 @@ function updateText(text) {
 function readInput() {
     let cmdElem = document.getElementById("command");
     let command = cmdElem.value;
+    let lp = document.getElementById("linePrefix");
 
+    lp.hidden = true;
     cmdElem.disabled = true;
 
     // args[0] is command; args[1:] are parameters
@@ -56,6 +58,7 @@ function readInput() {
     // for now
     updateText("parsed: " + command);
     cmdElem.value = ""; //is there a better way idk
+    lp.hidden = false;
     cmdElem.disabled = false;
     cmdElem.focus();
 }
