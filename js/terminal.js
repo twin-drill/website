@@ -9,10 +9,9 @@ const LINE = "o2i6@localhost:~$ ";
 const cookies = document.cookie;
 
 window.onload = function() {
-    updateHistory();
     document.getElementById("command").addEventListener("keypress",
         function(event) {
-        if (event.keyCode == 13) {
+        if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("command").disabled = true;
             readInput();
@@ -20,16 +19,15 @@ window.onload = function() {
     }, false);
 }
 
+// Old terminal emulation code, TODO branch this maybe?
 function updateHistory() {
     // TODO make cookie storage framework
     // TODO figure out what I want with scrolling
-    updateText("Session terminated.");
-    // updateText("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+    updateTextOld("Session terminated.");
 }
 
-function updateText(text) {
+function updateTextOld(text) {
     let textLines = text.split(/\r?\n/);
-    console.log(textLines);
     let elem = document.createElement("cmd");
     let hist = document.getElementById("history");
     let em;
@@ -43,6 +41,7 @@ function updateText(text) {
 
     });
 }
+///////////////////////////////////////////////////////////////
 
 function readInput() {
     let cmdElem = document.getElementById("command");
@@ -55,16 +54,38 @@ function readInput() {
     // args[0] is command; args[1:] are parameters
     let args = command.split(" ");
 
-    // for now
-    updateText("parsed: " + command);
+    inputHandler(args);
     cmdElem.value = ""; //is there a better way idk
     lp.hidden = false;
     cmdElem.disabled = false;
     cmdElem.focus();
 }
 
+function inputHandler(args) {
+    // for now
+    updateText("parsed: " + args[0]);
+}
 
-//argparse example
+function updateText(text) {
+    let textLines = text.split(/\r?\n/);
+    let res = document.getElementById("resultID");
+    let em;
+
+    res.textContent = "";
+
+    textLines.forEach(function(line) {
+        for (let i = 0; i < 100; ++i) // testing scrolling
+        {
+            em = document.createElement("cmd");
+            res.appendChild(em);
+            em.textContent += line;
+            //res.appendChild(document.createElement("br"));  don't need apparently?
+        }
+    });
+}
+
+
+// argparse example
 // - prefix for arguments with parameters
 // -- prefix for boolean-esque options
 function argparse(args) {

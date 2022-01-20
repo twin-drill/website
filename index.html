@@ -14,13 +14,14 @@
 </head>
 
 
-<body id="bg">
-<!-- TODO add margin or other spacing -->
+<body>
+    <background id="bg"></background>
+    <backsplash></backsplash>
     <terminal id="terminal">
-        <hist id="history">
-        </hist>
         <label for="command" id="linePrefix">o2i6@localhost:~$</label>
         <input type="text" id="command">
+
+        <result id="resultID">test</result>
     </terminal>
 </body>
 
@@ -31,7 +32,7 @@
         el: "#bg",
         mouseControls: true,
         touchControls: true,
-        gyroControls: false,
+        gyroControls: true,
         minHeight: 200.00,
         minWidth: 200.00,
         scale: 1.00,
