@@ -1,46 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<script src="js/terminal.js"></script>
-
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
-
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <title>o2i6@localhost</title>
+  <meta charset="UTF-8">
+  <title> </title>
+  <link rel="stylesheet" href="./style.css">
 
-    <!-- TODO add meta headers -->
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  
 </head>
 
-
 <body>
-    <background id="bg"></background>
-    <backsplash></backsplash>
-    <terminal id="terminal">
-        <label for="command" id="linePrefix">o2i6@localhost:~$</label>
-        <input type="text" id="command">
+  <div class='fixed-bg'>
+    <div class='tag'>
+      <div class='tag-text'>
+        ../index.html
+      </div>
+    </div>
+  </div>
+  
+  <div class='title'>
+    <div class='title-tip'>
+      <span class='title-tip-typed'></span>
+    </div>
+    <div class='title-text'>
+      <span class='title-text-typed'></span>
+    </div>
+    <div class='subtitle'>
+      <div class='subtitle-bar'>
+      </div>
+      <span class='subtitle-text'>name</span>
+    </div>
+  </div>
 
-        <result id="resultID"><br>run 'help' for a list of commands.</result>
-    </terminal>
+  <div class='main'>
+    <div class='main-spacer'>
+      <div class='main-spacer-bar'>
+      </div>
+      <span class='main-spacer-text'>text</span>
+    </div>
+    
+    <div class='main-text'>
+      <span class='main-text-text'>
+      Mathematics, computer and data science student at the University of Wisconsin-Madison.
+        <br/>
+        Part-time cybersecurity analyst, leadership at Cybersecurity-UW.
+        <br/>
+        FIRST robotics world champion contender.
+        <br/><br/>
+        Dedicated, passionate, level-headed, communicative.
+        <br/><br/>
+        Yes, I have taken Introduction to Algorithms.
+        
+      </span>
+    </div>
+    
+    <div class='social'>
+    <div class='main-social'>
+      <a href="https://github.com/o2i6">
+        <i class="ico fa-brands fa-github fa-2x"></i>
+      </a>
+      <a href="https://codepen.io/o2i6">
+        <i class="ico fa-brands fa-codepen fa-2x"></i>
+      </a>
+      <a href="https://twitter.com/arbitrary152_">
+        <i class="ico fa-brands fa-twitter fa-2x"></i>
+      </a>
+      <a href="https://www.instagram.com/divy_22222/">
+        <i class="ico fa-brands fa-instagram fa-2x"></i>
+      </a>
+      <a href="mailto:divyank.jain1@gmail.com">
+        <i class="ico fa-solid fa-envelope fa-2x"></i>
+      </a>
+      <a href="https://drive.google.com/file/d/1k_A60OXV0nFX9k09M4OeeJ8BLnoPSZiG/view?usp=share_link">
+        <i class="ico fa-solid fa-file fa-2x"></i>
+      </a>
+    </div>
+    </div>
+    
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/bbe0a02186.js" crossorigin="anonymous"></script>
 </body>
+<!-- partial -->
+  <script  src="./script.js"></script>
 
-<script src="js/three.min.js"></script>
-<script src="js/vanta.rings.min.js"></script>
-<script>
-    VANTA.RINGS({
-        el: "#bg",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: true,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x88ff00,
-        backgroundColor: 0x202428,
-        backgroundAlpha: 1
-    })
-</script>
-
+</body>
 </html>
