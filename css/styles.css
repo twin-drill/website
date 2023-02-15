@@ -58,3 +58,13 @@ cmd {
     z-index: 1;
     display:block;
 }
+
+a {
+    color: white;
+    margin: 5px;
+}
+
+input {
+    background-color: #303030;
+    color: #c6c6c6;
+}
