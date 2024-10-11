@@ -4,14 +4,13 @@ import {
   Code,
   SquareChevronRight,
   Package,
-    FileSymlink
+  FileSymlink,
 } from "lucide-react";
 import Head from "./head";
 import ResumeItem from "./resume_item";
 
 export default function Home() {
-
-    const size = "1.05rem";
+  const size = "1.05rem";
 
   return (
     <div className="h-full p-8 m-6">
@@ -35,13 +34,16 @@ export default function Home() {
       <ResumeItem sub="Scikit, PyTorch, TensorFlow, Django, Flask, NodeJS, JavaFX" />
       <SquareChevronRight className="inline mr-[4px]" size={size} />
       <ResumeItem sub="Linux, Web, GCP, AWS" />
-        <br/>
-        <br/>
-        <a href="https://drive.google.com/file/d/1Uz7J4lyATszBiPrqn9JzLUz9maYeYWF5/view"
-        target="_blank" rel="noopener noreferrer">
-            Full resume
-            <FileSymlink className="inline ml-[4px]" size={size} />
-        </a>
+      <br />
+      <br />
+      <a
+        href="https://drive.google.com/file/d/1Uz7J4lyATszBiPrqn9JzLUz9maYeYWF5/view"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Full resume
+        <FileSymlink className="inline ml-[4px]" size={size} />
+      </a>
     </div>
   );
 }
