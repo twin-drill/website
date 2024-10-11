@@ -13,7 +13,7 @@ export default function Head() {
       </div>
       <div className="text-right">
         <h3 className="text-md md:text-lg font-bold">Contact</h3>
-        <div className="text-xs md:text-md">
+        <div className="text-md">
           <a href="mailto:arbitrary152@gmail.com">
             arbitrary152@gmail.com
             <Mail size="1rem" className="inline ml-[3px]" />
