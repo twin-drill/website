@@ -5,13 +5,13 @@ export default function ResumeItem(props: {
 }) {
   return (
     <>
-      <p className="inline text-md font-normal">
+      <p className="inline text-sm md:text-md font-normal">
         {props.name ? <strong className="mr-3">{props.name}</strong> : ""}
         {props.sub}
       </p>
       {props.desc ? (
         <>
-          <p className="text-md font-normal ml-7">
+          <p className="text-sm md:text-md font-normal ml-7">
             <em>{props.desc}</em>
           </p>
         </>
