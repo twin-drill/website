@@ -1,101 +1,47 @@
-import Image from "next/image";
+import {
+  GraduationCap,
+  BriefcaseBusiness,
+  Code,
+  SquareChevronRight,
+  Package,
+    FileSymlink
+} from "lucide-react";
+import Head from "./head";
+import ResumeItem from "./resume_item";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+    const size = "1.05rem";
+
+  return (
+    <div className="h-full p-8 m-6">
+      <Head />
+      <br />
+      <GraduationCap className="inline mr-[4px]" size={size} />
+      <ResumeItem
+        name="University of Wisconsin - Madison"
+        sub="Computer Science, Data Science, Mathematics"
+        desc="Operating Systems, Algorithms, Artificial Intelligence, Databases"
+      />
+      <BriefcaseBusiness className="inline mr-[4px]" size={size} />
+      <ResumeItem
+        name="Temporal Technologies"
+        sub="May 2024 - Aug 2024"
+        desc="Software Engineer Intern (SDK)"
+      />
+      <Code className="inline mr-[4px]" size={size} />
+      <ResumeItem sub="Python, C/C++, JS/TS, Java, R, SQL, Bash" />
+      <Package className="inline mr-[4px]" size={size} />
+      <ResumeItem sub="Scikit, PyTorch, TensorFlow, Django, Flask, NodeJS, JavaFX" />
+      <SquareChevronRight className="inline mr-[4px]" size={size} />
+      <ResumeItem sub="Linux, Web, GCP, AWS" />
+        <br/>
+        <br/>
+        <a href="https://drive.google.com/file/d/1Uz7J4lyATszBiPrqn9JzLUz9maYeYWF5/view"
+        target="_blank" rel="noopener noreferrer">
+            Full resume
+            <FileSymlink className="inline ml-[4px]" size={size} />
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
