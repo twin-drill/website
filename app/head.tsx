@@ -17,17 +17,17 @@ export default function Head() {
         <div className="text-xs md:text-base font-normal">
           <Link href="mailto:divyank.jain1@gmail.com">
             divyank.jain1@gmail.com
-            <Mail size="1rem" className="inline ml-[3px]" />
+            <Mail size="1rem" className="inline ml-[5px]" />
           </Link>
           <br />
           <Link href="https://www.linkedin.com/in/divyank-jain-4377a3131">
             Divyank Jain
-            <Linkedin size="1rem" className="inline ml-[3px]" />
+            <Linkedin size="1rem" className="inline ml-[5px]" />
           </Link>
           <br />
           <Link href="https://github.com/twin-drill">
             twin-drill
-            <Github size="1rem" className="inline ml-[3px]" />
+            <Github size="1rem" className="inline ml-[5px]" />
           </Link>
         </div>
       </div>
