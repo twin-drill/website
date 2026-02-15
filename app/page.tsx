@@ -37,7 +37,7 @@ export default function Home() {
       <br />
       <br />
       <a
-        href="https://drive.google.com/file/d/1bfnOIgj__GWcAZrX2pjzk37UjYocNQ7a/view"
+        href="https://drive.google.com/file/d/15GeKtxyHETsN834xXjjqw0fmUQPMJaB8/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
       >
